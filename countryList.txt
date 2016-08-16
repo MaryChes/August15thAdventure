@@ -1,6 +1,5 @@
-usa 
-mexico
-cuba
-france
+USA
+Mexico
+Cuba
+Canada
 
-Germany

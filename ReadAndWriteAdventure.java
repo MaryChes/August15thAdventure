@@ -3,6 +3,9 @@ import java.io.*;
 import java.nio.file.*;
 import java.util.ArrayList;
 
+
+
+
 public class ReadAndWriteAdventure
 {
 	Path ourNewPath = Paths.get("\\Users\\admin\\newWorkspace\\August 15th\\src\\com\\lab\\monday\\adventure\\countryList.txt");
@@ -68,26 +71,3 @@ public class ReadAndWriteAdventure
 		countries.trimToSize();
 	}
 }//class
-//try (PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter(aNewFile))))
-//{
-//	out.println(countries.get(0));
-//	out.close();
-//}
-//catch (IOException e)
-//{
-//	e.printStackTrace();
-//}
-//
-//try (PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter(aNewFile,true))))
-//{
-//	for (int i = 1; i < (countries.size())-1; i++)
-//	{
-//		out.println(countries.get(i));
-//	}
-//	out.close();	
-//}
-//catch (IOException e)
-//{
-//	e.printStackTrace();
-//}	
-//end delete countries

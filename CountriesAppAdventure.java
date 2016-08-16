@@ -58,7 +58,7 @@ public class CountriesAppAdventure
 			{
 				case "1":
 					ReadAndWriteAdventure display = new ReadAndWriteAdventure();
-					System.out.print("Here is the list you requested\n1");
+					System.out.print("Here is the list you requested:\n");
 					display.readCountries();
 				break;
 				
@@ -87,10 +87,6 @@ public class CountriesAppAdventure
 					{
 						System.out.println("Glad we double-checked.");
 					}	
-					
-					/*for(int i=0;i<ReadAndWriteAdventure.countries.size(); i++){
-						System.out.println(ReadAndWriteAdventure.countries.get(i));
-					}*/
 				break;
 				
 				case "4":
@@ -99,4 +95,7 @@ public class CountriesAppAdventure
 			}//switch		
 		}//while	
 	}//main
+	
+		
+	
 }//class
