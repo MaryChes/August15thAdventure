@@ -3,9 +3,6 @@ import java.io.*;
 import java.nio.file.*;
 import java.util.ArrayList;
 
-
-
-
 public class ReadAndWriteAdventure
 {
 	Path ourNewPath = Paths.get("\\Users\\admin\\newWorkspace\\August 15th\\src\\com\\lab\\monday\\adventure\\countryList.txt");
@@ -13,20 +10,17 @@ public class ReadAndWriteAdventure
 	static ArrayList<String>countries = new ArrayList<>();
 	public void readCountries()
 	{
-		
 		for (int i = 0; i < countries.size(); i++)
 		{
 			System.out.println(countries.get(i));
 		}
-		
 	}//end readCountries
 	
 	public void writeCountries(String userCountry)
 	{
-
 		try(PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter(aNewFile, true))))
 		{
-			out.print("\n" + userCountry);
+			out.print(userCountry);
 			countries.add(userCountry);
 			out.close();
 		}
@@ -35,7 +29,6 @@ public class ReadAndWriteAdventure
 		{
 			e.printStackTrace();
 		}
-	
 	}//end writeCountries
 	
 	public void deleteCountries()
@@ -49,7 +42,6 @@ public class ReadAndWriteAdventure
 		{
 			e.printStackTrace();
 		}
-		
 		try (PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter(aNewFile,true))))
 		{
 			for (int i = 1; i < (countries.size())-1; i++)
@@ -61,8 +53,7 @@ public class ReadAndWriteAdventure
 		catch (IOException e)
 		{
 			e.printStackTrace();
-		}	
-		
+		}		
 	}	//end delete countries
 	
 	public void deleteLastCountryFromArray()

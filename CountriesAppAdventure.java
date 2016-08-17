@@ -1,6 +1,5 @@
 package com.lab.monday.adventure;
 
-
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -8,7 +7,6 @@ import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Scanner;
-
 
 public class CountriesAppAdventure
 {
@@ -40,7 +38,7 @@ public class CountriesAppAdventure
 		}
 		while (unitedNations == true)
 		{
-			System.out.println();
+			
 			System.out.println("Welcome to our working list of countries.");
 			
 			do
@@ -71,11 +69,14 @@ public class CountriesAppAdventure
 				
 				case "3":
 					System.out.print("Are you sure you wish to delete the last country entered in working list of countries?");
-					
-					System.out.println("Please enter yes or no."
+					do
+					{
+						System.out.println("Please enter yes or no."
 							+ "\n\tYes"
 							+ "\n\tNo");
-					userConfirmation = map.nextLine();
+						userConfirmation = map.nextLine();
+					}
+					while (ValidationAdventure.isValidYesNo(userConfirmation));
 					if(userConfirmation.equalsIgnoreCase("yes"))
 					{
 						ReadAndWriteAdventure delete = new ReadAndWriteAdventure();
@@ -94,8 +95,5 @@ public class CountriesAppAdventure
 					System.exit(0);
 			}//switch		
 		}//while	
-	}//main
-	
-		
-	
+	}//main	
 }//class

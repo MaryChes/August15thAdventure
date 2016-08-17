@@ -20,14 +20,14 @@ public class ValidationAdventure
 		}
 		return validSelection;
 	}
-	public static boolean isValidYesNo(String yesNoChoice)
+	public static boolean isValidYesNo(String userConfirmation)
 	{
 		boolean validSelection = true;
 		String[] validEntries = {"yes", "no"};
 		
 		for (int i = 0; i < validEntries.length; i++)
 		{
-			if (yesNoChoice.equalsIgnoreCase(validEntries[i].toString()))
+			if (userConfirmation.equalsIgnoreCase(validEntries[i].toString()))
 			{
 				validSelection = false;
 			}
